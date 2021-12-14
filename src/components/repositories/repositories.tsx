@@ -82,7 +82,7 @@ const Repositories = () => {
                         key={node.name}
                         node={node}
                     />
-                )
+                ).reverse()
             }
         </>
     )

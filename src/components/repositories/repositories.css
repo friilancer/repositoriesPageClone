@@ -1,0 +1,100 @@
+.repository{
+	color: 	#444;
+	display: grid;
+	grid-template-columns: 	1fr auto;
+	align-items: center;
+	padding: 10px 0;
+	border-bottom: 1px solid #C1C1C1;	
+}
+
+.repository div{
+	margin: 5px 0;
+}
+
+.primaryRepositoryData{
+	display: flex;
+	column-gap: 15px;
+	align-items: center;	
+}
+
+.isPrivate{
+	padding: 1px 6px;
+	border: 1px solid #C1C1C1;
+	font-size: 	12px;
+	font-weight: bold;	
+	border-radius: 10px;
+	position: relative;	
+	top: 3px;
+	color: #7a7a7a;
+}
+
+.repositoryName{
+	padding: 2px 0;
+	color: 	#0366D6;
+	font-weight: bold;
+	font-size: 	20px;
+	cursor: pointer;	
+}
+
+.repositoryName:hover{
+	text-decoration: underline;	
+}
+
+.forkedFrom{
+	font-size: 14px;
+}
+
+.repositoryStar{
+	box-sizing: border-box;
+	display: flex;	
+	column-gap: 3px;
+	align-items: center;
+	justify-content: center;		
+	padding: 5px 10px;
+	border: 1px solid #C1C1C1;
+	border-radius: 6px;
+	justify-self:end;
+	cursor: pointer;	
+}
+
+.repositoryStar:hover{
+	background: #f1f1f1;
+}
+
+.repositoryStarText{
+	color: 	#24292E;
+	position: relative;	
+	top: 2px;
+	font-size: 12px;
+}
+
+.secondaryRepositoryData{
+	display: flex;	
+	column-gap: 15px;
+	font-size: 	13px;
+	align-items: center;
+}
+
+.secondaryRepositoryData span{
+	margin: 0 1px;
+}
+
+.secondaryRepositoryData .detailContainer{
+	display: flex;
+	column-gap: 3px;
+	align-items: center;
+}
+
+.repositoryForks{
+	cursor: pointer;
+}
+
+.repositoryForks:hover{
+	color: #0366D6;
+}
+
+@media screen and (max-width:765px){
+	.repository{
+		padding: 0 1.5vw;
+	}
+}

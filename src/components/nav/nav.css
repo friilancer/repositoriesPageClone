@@ -1,0 +1,324 @@
+nav{
+	background:#24292E;
+}
+
+nav.primaryNav{
+	padding: 15px 20px;
+	display: grid;
+}
+
+.navContainer{
+    grid-template-columns: auto auto 1fr;
+}
+
+.navContainer__focus{
+    grid-template-columns: 1fr 0.5fr 0.5fr
+}
+
+.navContainer__focus_sm{
+    grid-template-columns: 1000px auto 1fr
+}
+
+
+
+i.fa-bars{
+	display: none;
+}
+
+.searchGithub{
+	display: grid;
+	grid-template-columns: 1fr 23px;
+	place-items: center start;
+}
+
+.searchGithub-input{
+	padding: 6px 10px;
+	background: transparent;
+	border: 1px solid #666;
+	border-radius: 5px;
+}
+
+.searchGithub-input:focus{
+	background: #fff;
+	outline:none;
+	border:1px solid #0366D6;
+}
+
+.primaryNav .searchGithub-input{
+	width: 	250px;
+}
+
+.secondaryNav .searchGithub-input{
+	width: 	100%;
+}
+.primaryNav .searchGithub-input:focus{
+	width: 98%;
+}
+
+
+.searchSlash{
+	padding: 1px 6px;
+	border: 1px solid #666;
+	color: 	#F1F2F2;
+	font-size: 	12px;
+	border-radius: 	3px;
+	position: relative;	
+}
+
+
+.primaryNav .searchGithub .searchSlash{
+	right: 22px;
+}
+
+.secondaryNav .searchGithub .searchSlash{
+	right: 5px;
+}
+
+.fa-github{
+	font-size: 	32px;
+	color: 	#fff;
+	cursor: pointer;	
+}
+
+.fa-github:hover, 
+.nav-second a:hover, 
+.nav-third a:hover, 
+.secondaryNav a li:hover,
+i.fa-bars:hover{
+	color: #c1c1c1;
+}
+
+.nav-first{
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-column-gap: 20px;
+	align-items: center;		
+}
+
+.nav-second{
+	display: flex;
+	align-items: center;
+	column-gap: 20px;
+}
+.nav-second a{
+	text-decoration: none;
+	font-weight: bold;
+	color: #fff;
+	font-size: 14px;
+}
+
+.nav-third{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	column-gap: 15px;
+}
+
+
+.nav-bellGroup .fa-bell{
+	font-size: 18px;
+}
+
+.nav-profileGroup, .nav-plusGroup{
+	display: flex;
+	align-items: center;
+	column-gap: 5px;
+}
+
+.nav-third a{
+	color:#f2f1f1;
+	text-decoration: none;
+}
+
+.nav-plusGroup .fa-plus{
+	color: #C9CACB;
+	font-size: 14px;
+}
+
+.nav-third .fa-caret-down{
+	font-size: 10px;
+}
+
+.profilePhoto{
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	border: 0.1px solid #C9CACB;
+}
+
+.pullRequest{
+	display: flex;
+}
+
+.pullRequest .request{
+	margin-left: 5px
+}
+
+.secondaryNav {
+	padding: 20px 20px 6px;
+}
+
+.toggleHide{
+	display: none;
+}
+
+.secondaryNav ul{
+	list-style-type: none;
+	padding: 0;
+}
+
+.secondaryNav ul a{
+	display: flex;	
+	column-gap: 5px;
+	align-items: center;
+	border-top: 1px solid #666;
+	width: 	100%
+}
+
+
+.secondaryNav .fa-sign-out-alt{
+	color: inherit;
+}
+
+.secondaryNav ul li {
+	padding: 10px 0;
+	color: #fff;
+	font-weight: bold;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.repositoriesNav-userDetails{
+	display: flex;
+	column-gap: 5px;
+	width: 28vw;
+	max-width: 350px;
+	align-items: center;
+}
+
+@media screen and (min-width: 765px){
+	.repositoriesTab{
+		margin-left: 30px;
+		position: relative;
+		left: 15px;
+	}
+	nav.primaryNav {
+	    padding: 15px 15px;
+	}
+	
+	.repositoriesNav{
+		grid-template-columns: auto 1fr;
+		column-gap: 8%;
+		margin: 20px auto 10px;
+		padding: 0 20px;
+	}
+	
+	section.repositoriesNav{
+		margin-top: 20px;
+	}
+}
+
+
+
+@media screen and (min-width: 1000px){
+
+	.primaryNav .searchGithub-input {
+    	width: 300px;
+	}
+
+	nav.primaryNav {
+	    padding: 15px 30px;
+	}
+
+}
+
+@media screen and (min-width: 1015px){
+	.pullRequest .s{
+		display: none
+	}
+
+}
+
+@media screen and (min-width: 1080px){
+	.repositoriesNav-userDetails{
+		max-width: none;	
+	}
+}
+
+@media screen and (min-width: 1300px){
+	section.repositoriesNav{
+		grid-template-columns: 380px 1fr;
+	}
+
+	
+	.repositoriesNav{
+		column-gap: 2px;
+	}	
+}
+
+@media screen and (min-width: 1400px){
+	section.repositoriesNav{
+		grid-template-columns: 4fr 7fr;
+	}
+	
+}
+
+@media screen and (min-width: 1800px){
+	section.repositoriesNav{
+		grid-template-columns: 1.3fr 2fr;
+	}
+	
+}
+
+@media screen and (min-width: 2200px){
+	section.repositoriesNav{
+		grid-template-columns: 1.3fr 1.8fr;
+	}	
+}
+@media screen and (max-width: 1015px){
+	.pullRequest .request{
+		display: none
+	}
+}
+
+@media screen and (max-width: 765px){
+	
+	i.fa-bars{
+		display: block;
+		color: #fff;
+		font-size: 25px;
+		align-self: center;
+		cursor: pointer;
+	}
+
+    .sm-none{
+        display: none;
+    }
+
+	nav.primaryNav{
+		grid-template-columns: auto 1fr auto;
+	}
+	
+	.nav-first{
+		place-self:center;	
+	}
+}
+
+
+
+.repositoriesNav{
+	display: grid;
+	align-items: center;
+	z-index: 1;
+    border-bottom: 1px solid #9A9A9A;
+    background: #fff;
+}
+
+.profileLargerPhoto{
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+}
+
+
+

@@ -1,25 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
+import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink, from} from "@apollo/client"
+import { setContext } from '@apollo/client/link/context';
+import {onError} from '@apollo/client/link/error'
 import './App.css';
+import Nav from './components/nav/nav';
+import SecondaryNav from './components/nav/secondary_nav';
+import Main from './components/main/main';
+import Footer from './components/footer/footer';
+
+const errorLink = onError(({graphQLErrors, networkError}) => {
+  if(graphQLErrors){
+    graphQLErrors.map(({message}) => {
+      alert(`Graphql error ${message}`)
+    })
+  }
+})
+
+const httpLink  = createHttpLink({
+  uri: `https://api.github.com/graphql`
+})
+
+const authHeader = setContext((_, {headers}) => ({
+  headers: {
+    ...headers,
+    "authorization": `Bearer ${process.env.REACT_APP_GIT_PUBLIC_KEY}`
+  }
+}))
+const link =  from([
+  errorLink,
+  authHeader.concat(httpLink)
+])
+
+const client = new ApolloClient({
+  cache: new InMemoryCache(),
+  link
+})
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ApolloProvider client={client}>
+        <Nav />
+        <SecondaryNav display={'display_lg'}/>
+        <Main />
+        <Footer />
+    </ApolloProvider>
   );
 }
 

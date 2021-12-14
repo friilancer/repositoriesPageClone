@@ -1,0 +1,210 @@
+.repositoriesSearchContainer{
+	display: grid;
+	grid-template-columns: 1fr auto auto;
+	align-items:center;
+	column-gap: 15px;
+	padding-right: 15px;
+}
+
+.repositoriesSearch_main{
+	border-bottom: 1px solid #C1C1C1;
+}
+
+.repositoriesSearchContainer_button{
+	padding: 10px 17px;
+	background: #FAFBFC;
+	border: 1.5px solid #E8EAEC;
+	border-radius: 	10px;
+	color:  #24292E;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background 0.5s;
+}
+
+.repositoriesSearchContainer_button i{
+    margin: 0 3px;
+}
+
+.repositoriesSearchContainer_button:hover{
+	background: #F4F3F3;
+}
+
+.button_new{
+	background: #2EA44F;
+	color:#fff;
+}
+
+.button_new:hover{
+	background: #279445;
+}
+
+
+.repositoriesSearchContainer .fa-book{
+	color: white;
+}
+
+.button_new_main, .filtersContainer_main{
+	display: none;
+}
+
+
+.repositoriesSearch{
+	padding: 10px 15px;
+	border: 1px solid #E8EAEC;
+	border-radius: 5px;
+}
+
+.repositoriesSearch:focus{
+	border: 1px solid #0366D6;
+	outline: none;
+	box-shadow: 0 0 5px 0 #0366D6;
+}
+
+
+@media screen and (min-width: 765px){
+	.button_new{
+		width: 85px;
+		position: relative;	
+		left: 20%	
+	}
+    .totalPublicRepositories, .repositoriesContainer{
+		margin: 0 10px;
+	}
+
+	/*.repositoriesNav{
+		grid-template-columns: auto 1fr;
+		column-gap: 8%;
+		margin: 20px auto 10px;
+		padding: 0 20px;
+	}
+	
+	section.repositoriesNav{
+		margin-top: 20px;
+	}*/
+}
+
+
+@media screen and (min-width: 910px){
+	.repositoriesNav{
+		column-gap: 40px;
+	}
+}
+
+@media screen and (min-width: 1000px){
+	.repositoriesSearchContainer{
+		margin: 20px 0;
+	}
+
+	.filtersContainer_secondary{
+		display: flex;
+		column-gap: 4px;
+		position: relative;
+		left: 3%;
+	}
+}
+
+
+
+@media screen and (max-width: 1200px){
+	.filtersContainer_main{
+		display: flex;
+		column-gap: 4px;
+		margin: 10px 0;
+	}
+
+	.filtersContainer_secondary{
+		display: none;
+	}
+
+	.repositoriesSearchContainer{
+		grid-template-columns: 1fr auto;
+	}
+}
+
+@media screen and (max-width: 765px){
+	.button_new_secondary{
+		display: none;
+	}
+
+	.button_new_main{
+		display: block;
+		margin: 15px auto 5px;
+		width: 94%;
+		border: 1px solid #E8EAEC;
+	}
+	.repositoriesSearchContainer{
+		grid-template-columns: 1fr auto;
+		margin-left: 20px;
+	}
+	.filtersContainer_main{
+		margin-left: 20px;
+	}
+	.display_lg{
+		display: none;
+	}
+
+	.repositoriesPage-main{
+		margin-top: 15px;
+	}
+	.repositoriesSearchContainer{
+		display: grid;
+	}
+	.repositoriesSearch{
+		width: 96%;
+		margin: 20px 0;
+		position: relative;	
+		left: 4px
+	}
+
+	.totalPublicRepositories{
+		padding: 10px 0;
+	}
+
+	.repositoriesNav-userDetails{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 690px){
+	.repositoriesSearch{
+		left: 2px;
+	}
+}
+
+@media screen and (max-width: 640px){
+	.repositoriesSearch{
+		left: 0;
+	}
+}
+
+@media screen and (max-width: 545px){
+	.repositoriesTab div .fa{
+		display: none
+	}
+}
+
+@media screen and (max-width: 520px){
+	.repositoriesSearchContainer{
+		margin-left: 15px;
+		width: 	93%
+	}
+
+}
+
+@media screen and (max-width: 450px){
+	.repositoriesSearchContainer{
+		margin-left: 20px;
+		width: 	90%
+	}
+	.button_new_main{
+		width: 91%;
+	}
+
+}
+
+@media screen and (max-width: 400px){
+	.repositoriesSearchContainer{
+		width: 	89%
+	}
+
+}

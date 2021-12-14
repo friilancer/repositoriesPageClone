@@ -1,0 +1,36 @@
+
+.main{
+	max-width: 1200px;
+}
+
+@media screen and (min-width: 765px){
+	section.main {
+	    padding: 0 10px;
+	}
+	
+	.main{
+		display: grid;
+		grid-template-columns: auto 1fr;
+		column-gap: 1%;
+		margin: 20px auto 10px;
+
+	}
+}
+
+@media screen and (min-width: 910px){
+	.main{
+		column-gap: 20px;
+	}
+}
+
+@media screen and (min-width: 1000px){
+	section.main {
+	    padding: 0 20px;
+	}
+}
+
+@media screen and (max-width: 765px){
+	section.main {
+	    margin-top: 20px ;
+	}
+}
